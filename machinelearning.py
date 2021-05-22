@@ -2,6 +2,7 @@
 import numpy as np
 import time
 survey = np.array([
+ # sword fights, romantic drama, scifi, good and evil, hate watching long movies, output
  [1, 0, 0, 0, 0, 1],
  [1, 0, 0, 0, 0, 1],
  [1, 0, 0, 0, 0, 1],
@@ -51,39 +52,39 @@ print("Type yes or no.")
 sword = input("Do you like sword fights?: ")
 sword.lower()
 if sword == "yes":
-   czero = 1
-else:
-   czero = 0
-
-salty = input("Do you like romantic drama?: ")
-salty.lower()
-if salty == "yes":
    szero = 1
 else:
    szero = 0
 
+drama = input("Do you like romantic drama?: ")
+drama.lower()
+if drama == "yes":
+   dzero = 1
+else:
+   dzero = 0
+
 scifi = input("Is science fiction cool?: ")
 scifi.lower()
 if scifi == "yes":
-   sozero = 1
+   sfzero = 1
 else:
-   sozero = 0
+   sfzero = 0
 
 good = input("Do you like talking about good and evil?: ")
 good.lower()
 if good == "yes":
-   swzero = 1
+   gzero = 1
 else:
-   swzero = 0
+   gzero = 0
 
-bitter = input("Do you hate watching long movies?: ")
-bitter.lower()
-if bitter == "yes":
-   bzero = 1
+long = input("Do you hate watching long movies?: ")
+long.lower()
+if long == "yes":
+   lzero = 1
 else:
-   bzero = 0
+   lzero = 0
 
-features = [[czero, szero, sozero, swzero, bzero]]
+features = [[szero, dzero, sfzero, gzero, lzero]]
 print(features)
 prediction = mlp.predict(features)
 print(prediction)
